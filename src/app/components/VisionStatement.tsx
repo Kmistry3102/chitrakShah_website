@@ -20,9 +20,9 @@ export default function VisionStatement() {
   }, []);
 
   return (
-    <section className="w-full flex flex-col lg:items-center items-start justify-center lg:pb-16 lg:pt-24 pb-16 pt-16 bg-white">
-      <div className='w-full lg:max-w-6xl max-w-full'>
-      <h2 className="text-black text-xl lg:text-4xl font-light tracking-wider m-0 text-left mb-4 lg:mb-8">Vision Statement</h2>
+    <section className="w-full flex flex-col lg:items-center items-start justify-center lg:pb-24 lg:pt-24 pb-16 pt-16 bg-gray-50">
+      <div className='w-full lg:max-w-6xl max-w-full px-8 lg:px-6'>
+      <h2 className="text-black text-3xl lg:text-4xl font-light tracking-wider m-0 text-left mb-4 lg:mb-8">Vision Statement</h2>
       <p className="text-black font-light text-lg lg:text-xl tracking-wide text-left">
         {typedText}
         <span className="inline-block w-2 h-6 align-middle bg-black animate-pulse ml-1" style={{verticalAlign: 'middle'}}></span>

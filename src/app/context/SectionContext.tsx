@@ -34,8 +34,32 @@ interface SectionProviderProps {
 export const SectionProvider: React.FC<SectionProviderProps> = ({ children }) => {
   const [expandedSection, setExpandedSection] = useState<SectionType | null>(null);
 
+  const scrollToSection = (section: SectionType) => {
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      // Add a delay to ensure the section is expanded before scrolling
+      setTimeout(() => {
+        const elementRect = sectionElement.getBoundingClientRect();
+        const absoluteElementTop = elementRect.top + window.pageYOffset;
+        const offset = 120; // Slightly more offset for better positioning
+        
+        window.scrollTo({
+          top: absoluteElementTop - offset,
+          behavior: 'smooth'
+        });
+      }, 300); // Longer delay to coordinate with the 1000ms expansion animation
+    }
+  };
+
   const toggleSection = (section: SectionType) => {
-    setExpandedSection(expandedSection === section ? null : section);
+    if (expandedSection === section) {
+      // Closing the section - no scrolling
+      setExpandedSection(null);
+    } else {
+      // Opening a new section - scroll to it
+      setExpandedSection(section);
+      scrollToSection(section);
+    }
   };
 
   return (

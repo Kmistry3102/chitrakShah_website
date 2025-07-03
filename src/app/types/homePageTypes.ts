@@ -34,7 +34,7 @@ export type PortfolioItem = {
 export type Article = {
   image: string;
   title: string;
-  //   url: string;
+    url: string;
   description: string;
 };
 
@@ -46,6 +46,7 @@ export type ConnectOption = {
 
 export type AccessLink = {
   icon: React.ElementType;
+  title: string;
   label: string;
   url: string;
 };

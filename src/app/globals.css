@@ -2,11 +2,39 @@
 
 html {
   scroll-behavior: smooth;
-  overscroll-behavior: none;
 }
 
 body{
   font-family: "Bricolage Grotesque", sans-serif !important;
   scroll-behavior: smooth;
-  overscroll-behavior: none;
+}
+
+/* marquee div container */
+.marquee {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b1b1b;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+/* nested div inside the container */
+.marquee div {
+  display: block;
+  width: 200%;
+  position: absolute; 
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+/* span with text */
+.marquee span {
+  float: left;
+  width: 50%;
+}
+/* keyframe */
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }

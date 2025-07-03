@@ -5,17 +5,20 @@ import { useSectionContext } from "../context/SectionContext";
 
 export default function TerritoryReachSection() {
   const { expandedSection, toggleSection } = useSectionContext();
-  const isExpanded = expandedSection === 'territory';
+  const isExpanded = expandedSection === "territory";
 
   const handleToggle = () => {
-    toggleSection('territory');
+    toggleSection("territory");
   };
 
   return (
-    <section id="territory" className="w-full flex flex-col items-center lg:py-16 py-8">
+    <section
+      id="territory"
+      className="w-full flex flex-col items-center lg:py-16 py-8"
+    >
       <div className="w-full lg:max-w-6xl max-w-full">
         {/* Collapsible Header */}
-        <div 
+        <div
           className="group cursor-pointer transition-all duration-300 hover:scale-[1.02] w-full"
           onClick={handleToggle}
         >
@@ -41,44 +44,46 @@ export default function TerritoryReachSection() {
         </div>
 
         {/* Collapsible Content */}
-        <div 
+        <div
           className={`overflow-hidden transition-all duration-800 ease-out ${
-            isExpanded 
-              ? "max-h-[3000px] opacity-100 mt-12 lg:mt-20" 
-              : "max-h-0 opacity-0 mt-0"
+            isExpanded
+              ? "opacity-100 transform translateY(0) mt-12 lg:mt-20"
+              : "opacity-0 transform -translateY-10 mt-0 pointer-events-none"
           }`}
+          style={{
+            maxHeight: isExpanded ? "none" : "0px",
+            transition:
+              "opacity 800ms ease-out, transform 800ms ease-out, max-height 800ms ease-out",
+          }}
         >
-          <div className="flex flex-col gap-8 lg:p-5 p-0">
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">
             {TERRITORIES.map((item, index) => {
-              const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="flex items-center bg-black/5 rounded p-6 md:p-8 shadow-lg relative border border-black/10"
+                  className="p-4 lg:p-8 border border-black/10 hover:border-black/40 transition-all duration-300"
                   style={{
                     animationDelay: `${index * 150}ms`,
-                    animation: isExpanded ? "slideInUp 0.6s ease-out forwards" : "none",
+                    animation: isExpanded
+                      ? "slideInUp 0.6s ease-out forwards"
+                      : "none",
                     opacity: isExpanded ? 1 : 0,
-                    transform: isExpanded ? "translateY(0)" : "translateY(20px)",
+                    transform: isExpanded
+                      ? "translateY(0)"
+                      : "translateY(20px)",
                   }}
                 >
-                  <div className="border border-black/10 mr-6 lg:w-10 lg:h-10 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shadow-sm">
-                    <Icon className="lg:text-xl text-base text-gray-700" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-1">
-                      <span className="text-black font-medium text-lg lg:text-xl">
-                        {item.title}
-                      </span>
-                      <span className="ml-auto px-3 py-1 rounded text-xs font-light bg-white text-gray-700 border border-black/10">
+                  <div className="">
+                    <div className="flex flex-col items-start gap-3 mb-1">
+                      <span className="px-3 py-1 text-xs font-light bg-white text-black border border-black/10">
                         {item.status}
                       </span>
-                    </div>
-                    <div className="text-gray-800 font-light lg:text-base text-sm mb-1">
-                      {item.subtitle}
-                    </div>
-                    <div className="text-gray-600 lg:text-base text-sm">
-                      {item.description}
+                      <span className="text-black font-light text-lg lg:text-xl">
+                        {item.title}
+                      </span>
+                      <div className="text-gray-800 font-light lg:text-base text-sm mb-1">
+                        {item.subtitle}
+                      </div>
                     </div>
                   </div>
                 </div>

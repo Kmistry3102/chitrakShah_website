@@ -26,7 +26,7 @@ export default function WhoAmISection() {
                   Who Am I
                 </h2>
                 <div
-                  className={`transition-all duration-600 ease-out transform ${
+                  className={`transition-all duration-700 ease-out transform ${
                     isExpanded ? "rotate-180 scale-110" : "rotate-0 scale-100"
                   } group-hover:scale-110`}
                 >
@@ -42,11 +42,15 @@ export default function WhoAmISection() {
 
         {/* Collapsible Content */}
         <div
-          className={`overflow-hidden transition-all duration-800 ease-out ${
+          className={`overflow-hidden transition-all duration-1000 ease-out ${
             isExpanded
-              ? "max-h-[3000px] opacity-100 mt-12 lg:mt-20"
-              : "max-h-0 opacity-0 mt-0"
+              ? "opacity-100 transform translateY(0) mt-12 lg:mt-20"
+              : "opacity-0 transform -translateY-8 mt-0 pointer-events-none"
           }`}
+          style={{
+            maxHeight: isExpanded ? 'none' : '0px',
+            transition: 'opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), max-height 1000ms cubic-bezier(0.4, 0, 0.2, 1)'
+          }}
         >
           {/* Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 lg:p-5 p-0">
@@ -55,11 +59,11 @@ export default function WhoAmISection() {
               return (
                 <div
                   key={role.title}
-                  className="group relative hover:scale-105 transition-all duration-500 border border-black/10 bg-black/5 rounded p-6 lg:p-8 shadow-lg hover:shadow-xl"
+                  className="group relative hover:scale-105 transition-all duration-500 border border-black/10 p-6 lg:p-8 hover:border-black/20"
                   style={{
-                    animationDelay: `${index * 150}ms`,
+                    animationDelay: `${index * 200}ms`,
                     animation: isExpanded
-                      ? "slideInUp 0.6s ease-out forwards"
+                      ? "slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards"
                       : "none",
                     opacity: isExpanded ? 1 : 0,
                     transform: isExpanded
@@ -74,10 +78,6 @@ export default function WhoAmISection() {
                       <p className="text-black/70 text-base font-light">{role.caption}</p>
                     </div>
                   </div>
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                  {/* Corner accent */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-black/10 to-transparent rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               );
             })}
@@ -88,7 +88,7 @@ export default function WhoAmISection() {
         @keyframes slideInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
           }
           to {
             opacity: 1;

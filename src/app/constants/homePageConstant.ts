@@ -209,36 +209,42 @@ export const ARTICLES: Article[] = [
     description:
       "Legacy isn't built on chaos — it's built on clear processes, deep understanding, and honest advice. This is a call to all advisors in real estate: lead with clarity, and the respect will follow.",
     image: "/article-1.png",
+    url: "https://www.linkedin.com/posts/chitrakshivalik_be-a-builder-of-systems-not-just-a-seller-activity-7338184267576848384-ATuw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFvbzN4BzQ2_CFeRhvAmkPiWV8uQ2FhdTkQ",
   },
   {
     title: "Paracetamol or Painkiller?",
     description:
       "Are you offering surface-level solutions, or solving deep problems? Real success comes from listening, diagnosing, and serving with intent — not rushing with a pitch.",
     image: "/article-2.png",
+    url: "https://www.linkedin.com/posts/chitrakshivalik_chitrakshah-realestate-realestateinvesting-activity-7337819782546702336-tAl3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFvbzN4BzQ2_CFeRhvAmkPiWV8uQ2FhdTkQ",
   },
   {
     title: "Learn Early. Act Early.",
     description:
       "The biggest cost in real estate isn't money — it's delay. Every missed chance started with hesitation. The next opportunity is waiting. Are you?",
     image: "/article-3.png",
+    url: "https://www.linkedin.com/posts/chitrakshivalik_realestate-investmentmindset-chitrakshah-activity-7342166740195291136-mrkO?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFvbzN4BzQ2_CFeRhvAmkPiWV8uQ2FhdTkQ ",
   },
   {
     title: "Real Estate. Real Capital.",
     description:
       "This is not speculative money. It's strategic. Rooted in experience. Directed toward growth zones like Ognaj. More deployments coming.",
     image: "/article-4.png",
+    url: "https://www.linkedin.com/posts/chitrakshivalik_realestate-realestateinvestment-chitrakshah-activity-7337093304410423296-zDMf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFvbzN4BzQ2_CFeRhvAmkPiWV8uQ2FhdTkQ",
   },
   {
     title: "Learn. Build. Lead. Repeat.",
     description:
       "This isn't just a course — it's a journey from student to site. With 11 structured modules, real-world exposure, and real industry transformation, we're not teaching real estate. We're building the people who'll lead it.",
     image: "/article-5.png",
+    url: "https://www.linkedin.com/posts/chitrakshivalik_realestate-realestatelearning-chitrakshah-activity-7329122814668570624-hWLG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFvbzN4BzQ2_CFeRhvAmkPiWV8uQ2FhdTkQ",
   },
   {
     title: "Solve the System, First",
     description:
       "If something keeps breaking, don't fix the person — fix the system. True scale starts where ownership meets clarity",
     image: "/article-6.png",
+    url: "https://www.linkedin.com/posts/chitrakshivalik_chitrakshah-leadership-realestate-activity-7326946664328400896-eWiT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFvbzN4BzQ2_CFeRhvAmkPiWV8uQ2FhdTkQ",
   },
   
 ];
@@ -247,7 +253,7 @@ export const CONNECT_OPTIONS: ConnectOption[] = [
   {
     icon: FaRegComments,
     title: "Connect",
-    subtitle: "Select: Proposal /\nMeeting / Speaking",
+    subtitle: "Proposal /\nMeeting / Speaking",
   },
   {
     icon: FaUserPlus,
@@ -269,38 +275,45 @@ export const CONNECT_OPTIONS: ConnectOption[] = [
 export const ACCESS_LINKS: AccessLink[] = [
   {
     icon: FaFileAlt,
-    label: "PDF: Chitrak Shah Profile",
-    url: "#",
+    title: "PDF",
+    label: "Chitrak Shah Profile",
+    url: "/PDF Chitrak Shah.pdf",
   },
   {
     icon: FaBuilding,
-    label: "Site: Shivalik Group",
+    title: "Site",
+    label: "Shivalik Group",
     url: "https://shivalikgroup.com",
   },
   {
     icon: FaGraduationCap,
-    label: "Courses: SIRE",
+    title: "Courses",
+    label: "SIRE",
     url: "https://www.shivalik.institute/",
   },
   {
     icon: FaFileAlt,
-    label: "Deck: Shivalik Fund",
+    title: "Deck",
+    label: "Shivalik Fund",
     url: "https://shivalikgroup.com/ecosystem/fund",
   },
   {
     icon: FaUserFriends,
-    label: "Join: R Universe Waitlist",
+    title: "Join (Coming Soon)",
+    label: "R Universe Waitlist",
     url: "/",
   },
   {
     icon: FaPaperPlane,
-    label: "Submit: JV Proposal Form",
+    title: "Submit",
+    label: "JV Proposal Form",
     url: "https://forms.gle/CddpePdp7mSxSV3k6",
   },
   {
     icon: FaDownload,
-    label: "Template: Download Pitch Format",
-    url: "#",
+    title: "Template",
+    label: "Pitch Format",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSeXE9v5EwPOyK7ghsaiFef6HK_7HC5HlXUcUkrTBYle92VDZQ/viewform",
   },
 ];
 
@@ -381,7 +394,7 @@ export const TAGLINE_ITEMS = ["One ID", "One System", "One Universe"];
 export const HERO_BADGES: HeroBadge[] = [
   { icon: FiMapPin, label: "Ahmedabad, India" },
   { icon: FiHome, label: "Real Estate Tech" },
-  { icon: FiStar, label: "Trust Score: ", value: "92/100" },
+  { icon: FiStar, label: "Trust Score : ", value: "92/100" },
 ];
 
 export const TIMELINE: TimelineItem[] = [
@@ -404,12 +417,12 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     title: "Tech Expo Speaker Insights",
-    image: "/podcast-2.webp", // replace with techExpoImg
-    link: "https://www.youtube.com/watch?v=booO_Lqiahc",
+    image: "/podcast-2.2.webp", // replace with techExpoImg
+    link: "https://www.youtube.com/watch?v=9sRItjQgfUY",
   },
   {
-    title: "Future of Real Estate Podcast",
-    image: "/podcast-3.webp", // replace with futurePodcastImg
+    title: "Future of Real Estate",
+    image: "/podcast-3.2.avif", // replace with futurePodcastImg
     link: "https://www.youtube.com/watch?v=g50yDcyfugg",
   },
   {
@@ -421,5 +434,15 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Gujarati Entrepreneur Interview",
     image: "/podcast-5.png", // replace with gujaratiInterviewImg
     link: "https://youtu.be/oT4HvqIcseY",
+  },
+  {
+    title: "The Person Within with Ojas Rawal",
+    image: "/podcast-6.png", // replace with gujaratiInterviewImg
+    link: "https://www.youtube.com/watch?v=MGFhrDETogE",
+  },
+  {
+    title: "How To Start-Up in Real Estate",
+    image: "/podcast-7.avif", // replace with gujaratiInterviewImg
+    link: "https://www.youtube.com/watch?v=ocpARhntF_I",
   },
 ];

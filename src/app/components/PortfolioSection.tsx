@@ -44,16 +44,20 @@ export default function PortfolioSection() {
         <div 
           className={`overflow-hidden transition-all duration-800 ease-out ${
             isExpanded 
-              ? "max-h-[3000px] opacity-100 mt-12 lg:mt-20" 
-              : "max-h-0 opacity-0 mt-0"
+              ? "opacity-100 transform translateY(0) mt-12 lg:mt-20" 
+              : "opacity-0 transform -translateY-10 mt-0 pointer-events-none"
           }`}
+          style={{
+            maxHeight: isExpanded ? 'none' : '0px',
+            transition: 'opacity 800ms ease-out, transform 800ms ease-out, max-height 800ms ease-out'
+          }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:p-5 p-0">
             {PORTFOLIO.map((item, idx) => {
               return (
                 <div
                   key={item.title}
-                  className="group relative rounded border border-black/10 bg-gray-50 backdrop-blur-xl shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-black/10"
+                  className="group relative border border-black/10 p-6 transition-all duration-300 hover:border-black/40"
                   style={{
                     animationDelay: `${idx * 150}ms`,
                     animation: isExpanded ? "slideInUp 0.6s ease-out forwards" : "none",
